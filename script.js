@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (button.textContent.includes('Join')) {
       button.addEventListener('click', () => {
         // In a real implementation, this would link to the actual sign-up page
-        alert('🎉 Ready to join Dissect? This would redirect to the sign-up page!\n\nFor now, join the #dissect channel and visit dissect.athena.hackclub.com');
+        alert('Join the #dissect channel for more information!');
       });
     }
   });
@@ -60,11 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollToSection('overview');
       });
     }
-
-    if (button.textContent.includes('Starter Templates')) {
-      button.addEventListener('click', () => {
-        alert('🚀 Starter templates coming soon!\n\nThese will include basic layouts for:\n• Spotify clone\n• Pinterest-style gallery\n• Wordle/game layout');
-      });
     }
   });
 });
