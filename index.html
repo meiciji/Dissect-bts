@@ -1,15 +1,335 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dissect: Reverse Engineering the Web</title>
+  <meta name="description"
+    content="A You Ship We Ship event for curious coders who want to take apart and rebuild the web." />
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  Hello world
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-text">Dissect</span>
+        <span class="logo-bracket">/&gt;</span>
+      </div>
+      <div class="nav-links">
+        <a href="#overview">Overview</a>
+        <a href="#goals">Goals</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#join" class="nav-cta">Join Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-background"></div>
+    <div class="hero-content">
+      <div class="hero-badge">🧠 You Ship We Ship Event</div>
+      <h1 class="hero-title">
+        <span class="title-dissect">Dissect</span>
+        <span class="title-subtitle">Reverse Engineering the Web</span>
+      </h1>
+      <p class="hero-description">
+        A guided web development project for curious coders who want to take apart and rebuild the web.
+      </p>
+      <div class="hero-buttons">
+        <button class="btn btn-primary" onclick="scrollToSection('join')">
+          Join the Event
+        </button>
+        <button class="btn btn-secondary" onclick="scrollToSection('overview')">
+          Learn More
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="overview" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>💡 Concept / Overview</h2>
+        </div>
+
+        <div class="overview-content">
+          <div class="overview-text">
+            <p>
+              <strong>Dissect</strong> is where high schoolers pick an existing website (Spotify, Notion, Pinterest,
+              Wordle, etc.)
+              and "reverse engineer" a simplified version using HTML, CSS, and JavaScript. Through this creative
+              process,
+              participants learn how modern web tools work — and remix them into something all their own.
+            </p>
+            <div class="bonus-box">
+              <div class="bonus-icon">🔧</div>
+              <div>
+                <strong>Bonus:</strong> Add your own creative twist — maybe Spotify for dogs? Notion for witches?
+                Pinterest for weird history memes? Get weird, make it yours!
+              </div>
+            </div>
+          </div>
+          <div class="overview-visual">
+            <div class="code-preview">
+              <div class="code-header">
+                <div class="code-dots">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <span>your-project.html</span>
+              </div>
+              <div class="code-content">
+                <div class="code-line"><span class="code-tag">&lt;div</span> <span class="code-attr">class</span>=<span
+                    class="code-string">"spotify-clone"</span><span class="code-tag">&gt;</span></div>
+                <div class="code-line"> <span class="code-tag">&lt;h1&gt;</span>Spotify for Plants<span
+                    class="code-tag">&lt;/h1&gt;</span></div>
+                <div class="code-line"> <span class="code-comment">// Your creative twist here!</span></div>
+                <div class="code-line"><span class="code-tag">&lt;/div&gt;</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="goals" class="section section-dark">
+      <div class="container">
+        <div class="section-header">
+          <h2>Project Goals</h2>
+        </div>
+
+        <div class="goals-grid">
+          <div class="goal-card">
+            <div class="goal-number">1</div>
+            <h3>Choose a website</h3>
+            <p>Pick a site to analyze (ex. Spotify, Notion, Pinterest)</p>
+          </div>
+          <div class="goal-card">
+            <div class="goal-number">2</div>
+            <h3>Dissect its structure</h3>
+            <p>How does it work? What are its main components?</p>
+          </div>
+          <div class="goal-card">
+            <div class="goal-number">3</div>
+            <h3>Rebuild simplified version</h3>
+            <p>Use HTML, CSS, and JavaScript to recreate it</p>
+          </div>
+          <div class="goal-card">
+            <div class="goal-number">4</div>
+            <h3>Add your creative remix</h3>
+            <p>Make it weird, useful, or just plain cool</p>
+          </div>
+          <div class="goal-card">
+            <div class="goal-number">5</div>
+            <h3>Deploy your app</h3>
+            <p>Use Replit, GitHub Pages, or Vercel</p>
+          </div>
+          <div class="goal-card">
+            <div class="goal-number">6</div>
+            <h3>Ship it to the gallery</h3>
+            <p>30-second demo and short write-up</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="skills-rewards">
+          <div class="skills-section">
+            <h2>🛠️ Skills You'll Learn</h2>
+            <div class="skills-list">
+              <div class="skill-item">Developer tools (Inspect Element, Network tab)</div>
+              <div class="skill-item">HTML structure and layout</div>
+              <div class="skill-item">CSS styling and animations</div>
+              <div class="skill-item">JavaScript event handling & interactivity</div>
+              <div class="skill-item">Responsive design</div>
+              <div class="skill-item">Creativity in remixing interfaces</div>
+            </div>
+          </div>
+
+          <div class="rewards-section">
+            <h2>What You'll Earn</h2>
+            <div class="rewards-list">
+              <div class="reward-item">
+                <span class="reward-icon"></span>
+                Hours toward your Athena Award
+              </div>
+              <div class="reward-item">
+                <span class="reward-icon"></span>
+                Artifact(s) for prizes
+              </div>
+              <div class="reward-item">
+                <span class="reward-icon"></span>
+                Web Development skills for your portfolio!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-theme">
+      <div class="container">
+        <div class="theme-content">
+          <div class="theme-prompt">
+            <h2>Theme Prompt</h2>
+            <blockquote>
+              <div class="quote-icon">🌀</div>
+              <p>Take it apart. Rebuild it weird.</p>
+              <p>What if Spotify was made for plants? What if Pinterest only showed cursed images?
+                What if Wordle let you guess emotions instead of words?</p>
+            </blockquote>
+            <p>Make something useful, absurd, or just plain cool. The goal: <strong>understand</strong> how things work
+              — then make them your own.</p>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+    <section id="timeline" class="section section-dark">
+      <div class="container">
+        <div class="section-header">
+          <h2>Timeline</h2>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3>Kickoff Call</h3>
+              <ul>
+                <li>Intro to Reverse Engineering</li>
+                <li>Brainstorm + idea jam session</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3>During the Week</h3>
+              <ul>
+                <li>Daily tip drops in the #dissect channel</li>
+                <li>Optional coworking and code help</li>
+                <li>Midway check-in / remix challenge</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3>Project Deadline</h3>
+              <p>Ship it in the gallery!</p>
+              <div class="time-breakdown">
+                <div class="time-item">
+                  <span>Planning and picking your website</span>
+                </div>
+                <div class="time-item">
+                  <span>Building your clone</span>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="submission-section">
+          <h2>Project Submission</h2>
+          <p>Submit your:</p>
+          <div class="submission-list">
+            <div class="submission-item">
+              <div class="submission-icon">🔗</div>
+              <div>
+                <strong>Project link</strong>
+                <span>Live site (deployed version)</span>
+              </div>
+            </div>
+            <div class="submission-item">
+              <div class="submission-icon"></div>
+              <div>
+                <strong>30-second demo</strong>
+                <span>Video or screen recording</span>
+              </div>
+            </div>
+            <div class="submission-item">
+              <div class="submission-icon"></div>
+              <div>
+                <strong>Write-up</strong>
+                <span>What website did you dissect? What did you learn? What's your remix?</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="join" class="section section-cta">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Ready to Dissect?</h2>
+          <p>Any high schooler interested in web development can join!</p>
+
+          <div class="join-steps">
+            <div class="join-step">
+              <div class="join-number">1</div>
+              <div class="join-text">
+                <h3>Join the #dissect channel</h3>
+                <p>Connect with other participants</p>
+              </div>
+            </div>
+            <div class="join-step">
+              <div class="join-number">2</div>
+              <div class="join-text">
+                <h3>Start building</h3>
+                <p>Visit dissect.hackclub.com</p>
+              </div>
+            </div>
+            <div class="join-step">
+              <div class="join-number">3</div>
+              <div class="join-text">
+                <h3>Attend the kickoff call</h3>
+                <p>Get started with the community</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="cta-buttons">
+            <button class="btn btn-primary btn-large">Join the Event</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <span class="logo-bracket">&lt;</span>
+          <span class="logo-text">Dissect</span>
+          <span class="logo-bracket">/&gt;</span>
+        </div>
+        <p>Take it apart. Rebuild it weird. Make it yours.</p>
+      </div>
+    </div>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 
