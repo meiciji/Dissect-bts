@@ -96,6 +96,30 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// Purple cursor aura effect
+document.addEventListener('DOMContentLoaded', () => {
+  // Create cursor aura element
+  const cursorAura = document.createElement('div');
+  cursorAura.className = 'cursor-aura';
+  document.body.appendChild(cursorAura);
+
+  // Track mouse movement
+  document.addEventListener('mousemove', (e) => {
+    cursorAura.style.left = e.clientX + 'px';
+    cursorAura.style.top = e.clientY + 'px';
+  });
+
+  // Hide aura when mouse leaves window
+  document.addEventListener('mouseleave', () => {
+    cursorAura.style.opacity = '0';
+  });
+
+  // Show aura when mouse enters window
+  document.addEventListener('mouseenter', () => {
+    cursorAura.style.opacity = '1';
+  });
+});
+
 // Add typing effect to hero title (optional enhancement)
 document.addEventListener('DOMContentLoaded', () => {
   const heroTitle = document.querySelector('.title-dissect');
